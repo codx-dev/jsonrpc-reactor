@@ -1,6 +1,6 @@
 [package]
 name = "jsonrpc-reactor"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Victor Lopez <victor@codx.io>"]
 edition = "2021"
 keywords = ["jsonrpc"]
