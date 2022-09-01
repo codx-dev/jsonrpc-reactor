@@ -1,0 +1,20 @@
+[package]
+name = "jsonrpc-reactor"
+version = "0.1.0"
+authors = ["Victor Lopez <victor@codx.io>"]
+edition = "2021"
+keywords = ["jsonrpc"]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/codx-dev/jsonrpc-reactor"
+description = "JSON-RPC 2.0 Rust implementation with tokio backend."
+
+[dependencies]
+serde = { version = "1.0", default-features = false, features = ["alloc", "derive"] }
+serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
+tokio = { version = "1.20", optional = true, features = ["rt", "sync", "time"] }
+
+[features]
+default = ["reactor", "std", "serde/default", "serde_json/default"]
+reactor = ["std", "tokio"]
+std = ["serde/std", "serde_json/std"]
