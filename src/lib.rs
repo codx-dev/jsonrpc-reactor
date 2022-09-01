@@ -15,6 +15,9 @@ use serde::{Deserialize, Serialize};
 #[cfg(feature = "reactor")]
 pub use reactor::Reactor;
 
+#[cfg(feature = "reactor")]
+pub use tokio::{sync::mpsc, time};
+
 pub use serde_json::{json, Map, Value};
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
